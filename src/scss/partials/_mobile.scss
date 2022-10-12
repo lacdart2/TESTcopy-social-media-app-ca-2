@@ -1,0 +1,30 @@
+@include mediaSm {
+.hero {
+  height: 80vh;
+    overflow: hidden;
+    .hero-heading {
+        font-size: 2.8rem;
+       
+    }
+        p {
+            font-size: .8rem;
+            min-width: 96%;
+            text-transform: capitalize;
+           
+           
+        }
+        .btn-group-lg {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            .btn-lg {
+                min-width: 100%;
+            }
+        }
+    }
+}
+.fixed-bottom {
+    .navbar-brand {
+        font-size: 1rem;
+    }
+}

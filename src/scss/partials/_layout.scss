@@ -1,0 +1,43 @@
+.login-section{
+
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .form-container {
+      
+        min-width: 70%;
+    }
+}
+
+.message-container {
+    outline: 1px solid red;
+    width: 500px;
+    height: 100px;
+    color: white;
+    margin-top: 2rem;
+}
+.message {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid grey;
+    color: grey;
+}
+
+.message.error {
+    border-color: red;
+    color: white;
+    background: red;
+}
+
+.message.warning {
+    border-color: orange;
+    color: white;
+    background: orange;
+}
+
+.message.success {
+    border-color: green;
+    color: white;
+    background: green;
+}
