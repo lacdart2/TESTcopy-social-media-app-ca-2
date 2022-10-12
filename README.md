@@ -1,1 +1,1 @@
-# Frontend for a Strapi API
+# Frontend for a social app
