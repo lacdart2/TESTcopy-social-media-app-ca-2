@@ -1,4 +1,4 @@
-import { API_SOCIAL_URL } from "../constants.js";
+/* import { API_SOCIAL_URL } from "../constants.js";
 import { fetchToken } from "../fetchToken.js";
 import { displayMessage } from "../../components/displayMessage.js";
 const message = document.querySelector(".message-container");
@@ -29,7 +29,7 @@ export async function createPost(postData) {
     } catch (error) {
 
         console.log(error);
-      /*   displayMessage("error", "An error occured", ".message-container") */;
+        displayMessage("error", "An error occured", ".message-container");
     }
 
-}
+} */

@@ -1,61 +1,15 @@
-
-
-
-
-/* import { register } from "../api_settings/auth/register.js"; */
 import { API_SOCIAL_URL } from "../constants.js";
-export function setRegisterFormListener() {
-    const form = document.querySelector("#registerForm");
-    /*     const name = form.name.value;
-        const email = form.email.value;
-        const password = form.password.value;
-        const banner = form.banner.value;
-        const avatar = form.avatar.value; */
-    if (form) {
-        form.addEventListener("submit", (event) => {
-            event.preventDefault();
-            const form = event.target;
-            const formData = new FormData(form);
-            const profile = Object.fromEntries(formData.entries())
-            /*   if (!profile.banner) {
-                formData.delete('banner');
-            }
-             else if (!profile.avatar) {
-                   formData.delete('avatar');
-               } */
-
-            /*     const profile = {
-                    name,
-                    email,
-                    password,
-                    banner,
-                    avatar
-                } */
-            /*  const action = form.action;
-             const method = form.method; */
-
-
-
-            // send to api :
-            // in another file (api/auth/register.js)
-            register(profile)
-        })
-    }
-
-
-}
-
-
-
-
+import { displayMessage } from "../../components/displayMessage.js";
+const messageContainer = document.querySelector(".message-container");
 const action = "/auth/register";
 const method = "POST";
 
 export async function register(profile) {
 
     const registerURL = API_SOCIAL_URL + action;
+    console.log(registerURL);
     const body = JSON.stringify(profile);
-    console.log(registerURL)
+    console.log(body)
 
 
     const response = await fetch(registerURL, {
@@ -64,10 +18,17 @@ export async function register(profile) {
 
         },
         method,
-        body,
+        body
 
     })
     const result = await response.json();
+    return result;
     console.log(result);
+    if (result.id) {
+        displayMessage("success", "Successfully registered", ".message-container")
+    } else if (!result.id) {
+        displayMessage("warning", "Invalid register details", ".message-container");
+    }
+
 }
 

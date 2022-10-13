@@ -34,7 +34,7 @@ export async function getPost(id) {
 
 
 
-
+/* 
 import { API_SOCIAL_URL } from "../constants.js";
 import { fetchToken } from "../fetchToken.js";
 
@@ -88,4 +88,4 @@ const getPostURL = `${API_SOCIAL_URL}${action}`;
         console.log(error);
 
     }
-})();
+})(); */

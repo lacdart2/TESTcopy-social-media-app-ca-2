@@ -1,74 +1,48 @@
-import { displayMessage } from "../../components/displayMessage.js";
-import * as storage from "../../utils/storage.js"
 import { API_SOCIAL_URL } from "../constants.js";
-const message = document.querySelector(".message-container");
-
-
-export function setLoginFormListener() {
-    const form = document.querySelector("#loginForm");
-
-    if (form) {
-        form.addEventListener("submit", (event) => {
-            event.preventDefault();
-            const form = event.target;
-            const formData = new FormData(form);
-            const profile = Object.fromEntries(formData.entries())
-
-
-            // send it to the API
-            login(profile)
-
-        })
-    }
-
-}
-
+import * as storage from "../../utils/storage.js"
+import { relocate } from "../../components/relocate.js"
+import { displayMessage } from "../../components/displayMessage.js";
+const messageContainer = document.querySelector(".message-container");
 const action = "/auth/login";
 const method = "POST";
 
 export async function login(profile) {
 
     const loginURL = API_SOCIAL_URL + action;
+    console.log(loginURL);
     const body = JSON.stringify(profile);
-    console.log(loginURL)
-
-    try {
-        const response = await fetch(loginURL, {
-            headers: {
-                "Content-Type": "application/json",
-
-            },
-            method,
-            body,
-
-        })
+    console.log(body)
 
 
-        const { accessToken, ...account } = await response.json()
-        if (account, accessToken) {
+    const response = await fetch(loginURL, {
+        headers: {
+            "Content-Type": "application/json",
 
+        },
+        method,
+        body
 
-            displayMessage("success", "Successfully logged in", ".message-container");
-            console.log(account);
-            location.href = "/profile/home.html";
-            console.log(location.href);
+    })
+    const { accessToken, ...user } = await response.json();
+
+    storage.saveToStorage("token", accessToken)
+
+    // save all except token
+    storage.saveToStorage("profile", user)
 
 
 
+    console.log(accessToken);
+    if (accessToken) {
+        displayMessage("success", "Successfully Logged in", ".message-container")
 
-        }
 
-        if (account.message) {
 
-            displayMessage("warning", "Invalid login details", ".message-container");
-        }
-        storage.saveToStorage("token", accessToken);
-        storage.saveToStorage("profile", account);
-        console.log(accessToken)
-    } catch (error) {
-        console.log(error);
+        /*  window.setTimeout(relocate, 1000); */
+
+    } else if (!accessToken) {
+        displayMessage("warning", "Invalid login details", ".message-container");
     }
-
 
 }
 

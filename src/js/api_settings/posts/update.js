@@ -1,4 +1,4 @@
-import { API_SOCIAL_URL } from "../constants.js";
+/* import { API_SOCIAL_URL } from "../constants.js";
 import { fetchToken } from "../fetchToken.js";
 import { displayMessage } from "../../components/displayMessage.js";
 const message = document.querySelector(".message-container");
@@ -11,9 +11,9 @@ const method = "PUT";
 
 export async function updatePost(postData) {
 
-    /*  if (!postData.id) {
-         alert("update needs an ID");
-     } */
+    if (!postData.id) {
+        alert("update needs an ID");
+    }
     const updatePostURL = `${API_SOCIAL_URL}${action}/${postData.id}`;
 
     try {
@@ -39,7 +39,8 @@ export async function updatePost(postData) {
     } catch (error) {
 
         console.log(postData);
-        displayMessage("error", "An error occured", ".message-container");
+        displayMessage("error", "An error occurred", ".message-container");
     }
 }
 
+ */
