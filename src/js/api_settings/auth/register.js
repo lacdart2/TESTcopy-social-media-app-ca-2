@@ -24,13 +24,6 @@ export function setRegisterFormListener() {
                    formData.delete('avatar');
                } */
 
-            /*     const profile = {
-                    name,
-                    email,
-                    password,
-                    banner,
-                    avatar
-                } */
             /*  const action = form.action;
              const method = form.method; */
 
