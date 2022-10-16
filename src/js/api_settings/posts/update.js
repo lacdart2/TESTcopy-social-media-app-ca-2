@@ -1,19 +1,19 @@
-/* import { API_SOCIAL_URL } from "../constants.js";
+import { API_SOCIAL_URL } from "../constants.js";
 import { fetchToken } from "../fetchToken.js";
-import { displayMessage } from "../../components/displayMessage.js";
-const message = document.querySelector(".message-container");
+//import { displayMessage } from "../../components/displayMessage.js";
+//const message = document.querySelector(".message-container"); 
 
 const action = "/posts";
-const method = "PUT";
+const method = "put";
 
 
 
 
 export async function updatePost(postData) {
 
-    if (!postData.id) {
-        alert("update needs an ID");
-    }
+    //if (!postData.id) {
+    // alert("update needs an ID");
+    //}
     const updatePostURL = `${API_SOCIAL_URL}${action}/${postData.id}`;
 
     try {
@@ -26,21 +26,24 @@ export async function updatePost(postData) {
 
         })
         if (postData.created) {
-            displayMessage("success", "Post created", ".message-container");
-            form.reset();
+            // displayMessage("success", "Post created", ".message-container");
+            // form.reset();
             console.log(postData.created)
         }
 
         if (post.error) {
-            displayMessage("error", postData.message, ".message-container");
+            //displayMessage("error", postData.message, ".message-container"); 
         }
         return await response.json();
 
     } catch (error) {
 
         console.log(postData);
-        displayMessage("error", "An error occurred", ".message-container");
+        // displayMessage("error", "An error occurred", ".message-container");
     }
 }
 
- */
+
+
+
+

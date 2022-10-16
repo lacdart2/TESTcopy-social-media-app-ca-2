@@ -1,7 +1,10 @@
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/bootstrap/scss/_navbar.scss";
 @import "./partials/variables";
 @import "./partials/@media";
+@import "./partials/loader";
 @import "./partials/mobile";
+@import "./partials/mediumSize";
 @import "./partials/home";
 @import "./partials/register";
 @import "./partials/posts";

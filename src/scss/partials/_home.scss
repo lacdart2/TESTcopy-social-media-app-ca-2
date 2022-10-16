@@ -19,17 +19,21 @@ a {
     }
 }
 
-
-
-
-.hero {
+body {
     font-family: 'Share Tech', sans-serif;
-    height: 80vh;
-    background-image: url(../../images/coding-image.jpg);
+}
+.posts-page, .hero {
+background-image: url(../../images/coding-image.jpg);
     background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: hue;
     background-position: center;
     overflow: hidden;
+}
+
+ .hero{
+   
+    min-height: 100vh;
+ 
 
     .btn-group-lg {
 
@@ -60,8 +64,9 @@ a {
         font-size: 2rem;
         width: 70%;
         text-transform: capitalize;
-        color: $grey;
+        color: $white;
     }
+  
 }
 
 .fixed-bottom {

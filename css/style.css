@@ -11142,14 +11142,14 @@ fieldset:disabled .btn {
 
 @media screen and (max-width: 500px) {
   .hero {
-    min-height: 100vh;
+    height: 80vh;
     overflow: hidden;
   }
   .hero .hero-heading {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
   }
   .hero p {
-    font-size: 1rem;
+    font-size: .8rem;
     min-width: 96%;
     text-transform: capitalize;
   }
@@ -11187,9 +11187,12 @@ a:hover {
   font-size: 2rem;
 }
 
-.hero {
+body {
   font-family: 'Share Tech', sans-serif;
-  height: 100vh;
+}
+
+.hero {
+  height: 80vh;
   background-image: url(../../images/coding-image.jpg);
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: hue;
@@ -11216,9 +11219,10 @@ a:hover {
 }
 
 .hero p {
-  font-size: 2.1rem;
+  font-size: 2rem;
   width: 70%;
   text-transform: capitalize;
+  color: #fefefe;
 }
 
 .fixed-bottom {
@@ -11234,5 +11238,159 @@ a:hover {
 
 .fixed-bottom .container-fluid .navbar-brand, .fixed-bottom .container-sm .navbar-brand, .fixed-bottom .container-md .navbar-brand, .fixed-bottom .container-lg .navbar-brand, .fixed-bottom .container-xl .navbar-brand, .fixed-bottom .container-xxl .navbar-brand {
   margin-bottom: 10px;
+}
+
+/* .form-container {
+
+    height: 100vh;
+
+} */
+/* .register-heading {
+writing-mode: vertical-rl;
+    text-orientation: mixed;
+} */
+.reg-arrows {
+  visibility: hidden;
+  margin-bottom: 2rem;
+}
+
+.reg-arrows.active {
+  visibility: visible;
+}
+
+.reg-arrows .try-again {
+  margin-left: auto;
+}
+
+.post-heading {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 8rem;
+  margin-bottom: 5rem;
+}
+
+.posts-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 0.1rem;
+  height: 90%;
+  min-width: 96%;
+  padding-bottom: 5rem;
+  margin-top: 5rem;
+}
+
+.posts-container .post {
+  padding: .5rem;
+  border-radius: 0.2rem;
+  text-transform: capitalize;
+  font-size: smaller;
+  font-weight: 100;
+  padding-top: 0;
+}
+
+.posts-container .post .card-body {
+  overflow-y: hidden;
+  background-color: #a6b3f5;
+}
+
+.posts-container .card {
+  width: 200px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: .5rem;
+  flex-basis: 25%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+
+.posts-container .card:nth-of-type(2), .posts-container .card:nth-of-type(6), .posts-container .card:nth-of-type(7) {
+  flex-grow: 1;
+}
+
+.posts-container .card:nth-of-type(odd) {
+  /*    
+                            box-shadow: rgb(142, 142, 143) 0px 0px 0px 2px inset,
+                             rgb(70, 68, 68) 8px -6px 0px -3px,
+                              rgb(162, 164, 162) 5px -5px, */
+}
+
+.posts-container .card .btn-primary {
+  margin-top: auto;
+}
+
+.posts-container .card .card-details {
+  height: 100px;
+  overflow-y: hidden;
+}
+
+.posts-container .card .card-details p {
+  max-height: 100px;
+}
+
+.posts-container .card .card-details .small {
+  margin-top: auto;
+  margin-bottom: 1rem;
+}
+
+.posts-container .card .card-details .fa-solid {
+  color: #989898;
+  padding-right: .5rem;
+}
+
+.posts-container .card .card-details .fa-pen {
+  font-size: .8rem;
+}
+
+.hero-posts {
+  display: flex;
+  width: 80vw;
+}
+
+.login-section {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-section .form-container {
+  min-width: 70%;
+}
+
+.message-container {
+  width: 100%;
+  height: 100px;
+  color: white;
+  margin-top: 1rem;
+  border-radius: 2px;
+}
+
+.message {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid grey;
+  color: grey;
+}
+
+.message.error {
+  border-color: red;
+  color: white;
+  background: red;
+}
+
+.message.warning {
+  border-color: orange;
+  color: white;
+  background: orange;
+}
+
+.message.success {
+  border-color: green;
+  color: white;
+  background: green;
 }
 /*# sourceMappingURL=style.css.map */

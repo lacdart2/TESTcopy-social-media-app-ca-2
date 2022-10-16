@@ -1,6 +1,9 @@
 import { API_SOCIAL_URL } from "../constants.js";
 import { displayMessage } from "../../components/displayMessage.js";
-const messageContainer = document.querySelector(".message-container");
+/* import { relocateIndex } from "../../components/relocate.js"; */
+const arrows = document.querySelector(".reg-arrows");
+/* import { relocate } from "../../components/relocate.js"; */
+/* const messageContainer = document.querySelector(".message-container"); */
 const action = "/auth/register";
 const method = "POST";
 
@@ -10,8 +13,6 @@ export async function register(profile) {
     console.log(registerURL);
     const body = JSON.stringify(profile);
     console.log(body)
-
-
     const response = await fetch(registerURL, {
         headers: {
             "Content-Type": "application/json",
@@ -22,13 +23,22 @@ export async function register(profile) {
 
     })
     const result = await response.json();
-    return result;
+
     console.log(result);
     if (result.id) {
-        displayMessage("success", "Successfully registered", ".message-container")
+
+        displayMessage("success", "", "Successfully registered", ".message-container")
+
+        setTimeout("location.href = '/profile/login/index.html';", 1500);
+
+
+
     } else if (!result.id) {
-        displayMessage("warning", "Invalid register details", ".message-container");
+        displayMessage("warning", "", (result.message), ".message-container");
+
+        arrows.classList.add("active");
     }
 
+    return result;
 }
-
+/* "Invalid register details" */

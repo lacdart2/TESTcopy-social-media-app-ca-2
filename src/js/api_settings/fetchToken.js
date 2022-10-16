@@ -1,11 +1,12 @@
-import { getFromStorage } from ".././utils/storage.js"
+import { getFromStorage } from "../utils/storage.js";
 
 
 export function headers() {
     const token = getFromStorage("token");
+
     return {
 
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
         "Authorization": `Bearer ${token}`
 
     }

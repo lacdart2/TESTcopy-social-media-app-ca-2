@@ -1,7 +1,4 @@
-
 import { login } from "../api_settings/auth/login.js";
-
-
 export function setLoginFormListener() {
     const form = document.querySelector("#loginForm");
 
@@ -14,8 +11,8 @@ export function setLoginFormListener() {
             const formData = new FormData(form);
             const profile = Object.fromEntries(formData.entries())
             console.log(profile)
-            /*    const action = form.action;
-               const method = form.method; */
+            //   const action = form.action;
+            // const method = form.method; 
 
 
 
@@ -24,4 +21,4 @@ export function setLoginFormListener() {
             login(profile)
         })
     }
-}
+} 

@@ -35,25 +35,19 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link active text-white" aria-current="page"
-                                href="../login/index.html">Login</a>
+                                href="/profile/home/index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Register</a>
+                            <a class="nav-link text-white" href="/posts/index.html">Posts</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Profile
+                        <li class="nav-item ms-5">
+                            <a class="nav-link text-white" href="./profile/register/index.html">
+                                <div class="menu-container container-fluid bg-black col-12 col-md-12 bg-black  ">
+
+                                </div>
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Edit</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
                         </li>
+
                     </ul>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -66,8 +60,13 @@
     <main class="flex-grow-1 bg-dark text-light">
 
         <div class=" container-fluid ">
-            <div class="form-container bg-black row d-flex justify-content-center align-items-center ">
+            <div class="form-container bg-black row d-flex justify-content-center align-items-center mt-5 ">
+
                 <div class="col-12 col-md-6">
+                    <div
+                        class="posts-heading container border ps-0 p-2 mb-4  text-white d-flex align-items-start justify-content-start  mt-4">
+                        <h2 class="h1 ms-0">Edit Post</h2>
+                    </div>
                     <form id="editPost">
                         <div class="form-group mb-3">
                             <label for="title">Title</label>
@@ -77,16 +76,16 @@
                             <label for="body">Body</label>
                             <textarea id="body" class="form-control" name="body" required></textarea>
                         </div>
-                        <!-- <div class="form-group mb-3">
+                        <div class="form-group mb-3">
                             <label for="body">Post ID</label>
                             <input class="form-control" type="text" name="id" required>
-                        </div> -->
+                        </div>
                         <div class="form-group mb-3">
                             <label for="tags">Tags</label>
                             <input id="tags" class="form-control" type="text" name="tags">
                         </div>
                         <div class="form-group mb-3">
-                            <label for="image">Image</label>
+                            <label for="image">Media</label>
                             <input id="img" class="form-control" type="url" name="media">
                         </div>
                         <button type="submit" class="btn btn-success">Update Post</button>
@@ -96,7 +95,20 @@
             </div>
         </div>
     </main>
-
+    <footer>
+        <nav class="navbar fixed-bottom bg-black pt-lg-3">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white"
+                    href="https://www.noroff.no/?gclid=CjwKCAjws--ZBhAXEiwAv-RNL2E0c6B6y4FUfaagoPHbfAHOP2K3NNm09Dub1Zi7Z0gq5OM0Nl4KxhoChQ8QAvD_BwE">Noroff
+                    Website
+                    <i class="fa-solid fa-link"></i>
+                </a>
+            </div>
+            <div class="container-fluid">
+                <a class="navbar-brand text-white " href="https://github.com/lacdart2">Lakhdar Hafsi © 2022</a>
+            </div>
+        </nav>
+    </footer>
 </body>
 
 </html>

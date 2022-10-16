@@ -1,7 +1,7 @@
-/* import { API_SOCIAL_URL } from "../constants.js";
+import { API_SOCIAL_URL } from "../constants.js";
 import { fetchToken } from "../fetchToken.js";
-import { displayMessage } from "../../components/displayMessage.js";
-const message = document.querySelector(".message-container");
+import { displayMessageCreate } from "../../components/displayMessage.js";
+/* const message = document.querySelector(".message-container"); */
 
 const action = "/posts";
 const method = "post";
@@ -12,24 +12,30 @@ export async function createPost(postData) {
     try {
 
         const response = await fetchToken(createPostURL, {
+
             method,
             body: JSON.stringify(postData)
-        })
-        if (post.created) {
-            displayMessage("success", "Post created", ".message-container");
-            form.reset();
-            console.log(post.created)
-        }
 
-        if (post.error) {
-            displayMessage("error", post.message, ".message-container");
+        })
+        console.log(response);
+        if (json.id) {
+            displayMessageCreate("success", "Post created", ".message-container");
+            console.log(response.id)
+            form.reset();
         }
+        if (!json.id) {
+            displayMessageCreate("error", post.message, ".message-container");
+        }
+        const json = await post.json();
+
         return await post.json();
+
+
 
     } catch (error) {
 
         console.log(error);
-        displayMessage("error", "An error occured", ".message-container");
+        displayMessageCreate("error", "an error occurred ", ".message-container");
     }
 
-} */
+}

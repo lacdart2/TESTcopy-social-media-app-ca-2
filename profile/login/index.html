@@ -18,6 +18,8 @@
     <link rel="icon" href="data:;base64,=" />
     <script src="../../src/js/index.js" defer type="module"></script>
 
+
+
 </head>
 
 <body class="body-dark bg-black ">
@@ -37,10 +39,10 @@
                             <a class="nav-link active text-white" aria-current="page"
                                 href="../register/index.html">Register</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">login</a>
+                        <li class="nav-item ">
+                            <a class="nav-link text-success  active " href="#">Login</a>
                         </li>
-                        <li class="nav-item dropdown">
+                        <!--  <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-white" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Profile
@@ -53,7 +55,7 @@
                                 </li>
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
-                        </li>
+                        </li> -->
                     </ul>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -64,28 +66,31 @@
         </nav>
     </header>
     <main>
-
-        <div class="container login-section flex-grow-1 mt-5 text-light">
-            <div class="form-container row d-flex justify-content-center align-items-center ">
-                <div class="col-12 col-md-6">
-                    <form id="loginForm">
-                        <div class="form-group mb-3">
-                            <label for="email">Email</label>
-                            <input class="form-control" type="email" name="email" required
-                                pattern="^[\w\-.]+@(stud.)?noroff.no$" title="only @(stud.)noroff.no
+        <div class="conatiner hero ">
+            <div class=" col-12 col-md-6 container login-section flex-grow-1 mt-2 text-light pt-2 mb-5">
+                <div class="form-container d-flex flex-column justify-content-center align-items-center  ">
+                    <h2
+                        class="col-12 col-md-12 h1  p-3 border d-flex align-items-center justify-content-start register-heading">
+                        Login</h2>
+                    <div class="col-12 col-md-12 px-3 border pb-0">
+                        <form id="loginForm">
+                            <div class="form-group mb-3">
+                                <label for="email">Email</label>
+                                <input class="form-control" type="email" name="email" required
+                                    pattern="^[\w\-.]+@(stud.)?noroff.no$" title="only @(stud.)noroff.no
                          domains are allowed to login">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="password">Password</label>
-                            <input class="form-control" type="password" name="password" required minlength="8">
-                        </div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="password">Password</label>
+                                <input class="form-control" type="password" name="password" required minlength="8">
+                            </div>
 
-                        <button type="submit" class="btn btn-success">Login</button>
-                        <div class="message-container"> </div>
-                    </form>
+                            <button type="submit" class="btn btn-lg btn-success">Login</button>
+                            <div class="message-container col-12 col-md-6 mt-1 "></div>
+                        </form>
+                    </div>
                 </div>
             </div>
-
         </div>
     </main>
     <footer>

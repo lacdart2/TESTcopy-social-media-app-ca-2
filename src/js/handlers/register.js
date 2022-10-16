@@ -1,5 +1,3 @@
-
-
 import { register } from "../api_settings/auth/register.js"
 
 export function setRegisterFormListener() {
@@ -11,9 +9,11 @@ export function setRegisterFormListener() {
             const form = event.target;
             const formData = new FormData(form);
             const profile = Object.fromEntries(formData.entries())
-            console.log(profile)
-            const action = form.action;
-            const method = form.method;
+            console.log(profile);
+
+
+            // const action = form.action;
+            //const method = form.method; 
 
 
 

@@ -35,25 +35,19 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link active text-white" aria-current="page"
-                                href="../login/index.html">Login</a>
+                                href="/profile/home/index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Register</a>
+                            <a class="nav-link text-white" href="/posts/index.html">Posts</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-white" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Profile
+                        <li class="nav-item ms-5">
+                            <a class="nav-link text-white" href="./profile/register/index.html">
+                                <div class="menu-container container-fluid bg-black col-12 col-md-12 bg-black  ">
+
+                                </div>
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Edit</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
                         </li>
+
                     </ul>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -63,36 +57,58 @@
             </div>
         </nav>
     </header>
-    <main class="flex-grow-1 bg-dark text-light">
-
-        <div class=" container-fluid ">
-            <div class="form-container row d-flex justify-content-center align-items-center ">
-                <div class="col-12 col-md-6">
-                    <form id="createPost">
-                        <div class="form-group mb-3">
-                            <label for="name">Title</label>
-                            <input class="form-control" type="text" name="title" required>
+    <main class="flex-grow-1 bg-black text-light">
+        <div class="container hero">
+            <div class=" container-fluid ">
+                <div class="form-container container row d-flex justify-content-center align-items-center ">
+                    <div class="col-12 col-md-6">
+                        <div
+                            class="posts-heading container border ps-0 p-2 mb-4  text-white d-flex align-items-start justify-content-start  mt-4">
+                            <h2 class="h1 ms-0">Create Post</h2>
                         </div>
-                        <div class="form-group mb-3">
-                            <label for="body">Body</label>
-                            <textarea class="form-control" name="body" required></textarea>
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="tags">Tags</label>
-                            <input class="form-control" type="text" name="tags">
-                        </div>
-                        <!--  <div class="form-group mb-3">
-                            <label for="image">Image</label>
-                            <input class="form-control" type="url" name="media">
-                        </div> -->
-                        <button type="submit" class="btn btn-success">Create Post</button>
-                        <div class="message-container"></div>
-                    </form>
+                        <form id="createPost" class="border p-2 px-3">
+                            <div class="form-group mb-3">
+                                <label for="name">Title</label>
+                                <input class="form-control" type="text" name="title" required>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="body">Body</label>
+                                <textarea class="form-control" name="body" required></textarea>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="tags">Tags</label>
+                                <input class="form-control" type="text" name="tags">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="avatar">Avatar</label>
+                                <input class="form-control" type="url" name="avatar">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="image">Media</label>
+                                <input class="form-control" type="url" name="media">
+                            </div>
+                            <button type="submit" class="btn btn-success">Create Post</button>
+                            <div class="message-container"> </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
-
+    <footer>
+        <nav class="navbar fixed-bottom bg-black pt-lg-3 border-top">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white"
+                    href="https://www.noroff.no/?gclid=CjwKCAjws--ZBhAXEiwAv-RNL2E0c6B6y4FUfaagoPHbfAHOP2K3NNm09Dub1Zi7Z0gq5OM0Nl4KxhoChQ8QAvD_BwE">Noroff
+                    Website
+                    <i class="fa-solid fa-link"></i>
+                </a>
+            </div>
+            <div class="container-fluid">
+                <a class="navbar-brand text-white " href="https://github.com/lacdart2">Lakhdar Hafsi © 2022</a>
+            </div>
+        </nav>
+    </footer>
 </body>
 
 </html>

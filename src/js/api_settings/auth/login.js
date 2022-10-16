@@ -1,8 +1,8 @@
 import { API_SOCIAL_URL } from "../constants.js";
 import * as storage from "../../utils/storage.js"
-import { relocate } from "../../components/relocate.js"
 import { displayMessage } from "../../components/displayMessage.js";
-const messageContainer = document.querySelector(".message-container");
+const message = document.querySelector(".message-container");
+
 const action = "/auth/login";
 const method = "POST";
 
@@ -17,32 +17,31 @@ export async function login(profile) {
     const response = await fetch(loginURL, {
         headers: {
             "Content-Type": "application/json",
-
         },
         method,
         body
 
     })
     const { accessToken, ...user } = await response.json();
+    console.log(accessToken);
 
     storage.saveToStorage("token", accessToken)
-
     // save all except token
     storage.saveToStorage("profile", user)
 
 
-
     console.log(accessToken);
     if (accessToken) {
-        displayMessage("success", "Successfully Logged in", ".message-container")
 
+        const loggedIn = profile.email
+        const slicedName = loggedIn.split('@')[0];
 
+        displayMessage("success", slicedName, " logged in", ".message-container")
+        setTimeout("location.href = '/profile/home/index.html';", 1500);
 
-        /*  window.setTimeout(relocate, 1000); */
 
     } else if (!accessToken) {
         displayMessage("warning", "Invalid login details", ".message-container");
     }
 
-}
-
+} 
