@@ -1,15 +1,14 @@
 
 import { updatePost } from "../api_settings/posts/index.js"
-import { getPost } from "../api_settings/posts/index.js";
+import { postDetail } from "../api_settings/posts/index.js"
+
+
 
 
 export async function setUpdatePostFormListener() {
 
 
     const form = document.querySelector("#editPost");
-
-
-
 
     const url = new URL(location.href);
     const id = url.searchParams.get("id");
@@ -19,7 +18,7 @@ export async function setUpdatePostFormListener() {
     if (form) {
         const button = form.querySelector("button");
         button.disable = true;
-        const post = await getPost(id);
+        const post = await postDetail(id);
 
         form.title.value = post.title;
         form.body.value = post.body;
@@ -32,8 +31,7 @@ export async function setUpdatePostFormListener() {
             event.preventDefault();
             const form = event.target;
             const formData = new FormData(form);
-            const profile = Object.fromEntries(formData.entries())
-            console.log(profile)
+            const post = Object.fromEntries(formData.entries())
             post.id = id;
 
 

@@ -37,14 +37,14 @@ export async function getPost(id) {
 
 import { API_SOCIAL_URL } from "../constants.js";
 import { fetchToken } from "../fetchToken.js";
-/* import createMenu from "../../components/createMenu.js"; */
+//import createMenu from "../../components/createMenu.js"; 
 
 
 
 const action = "/posts";
 const getPostURL = `${API_SOCIAL_URL}${action}`;
 
-/* createMenu(); */
+
 export async function read() {
     const postsContainer = document.querySelector(".posts-container");
 
@@ -97,7 +97,7 @@ export async function read() {
 
     }
 };
-export async function getPost(id) {
+/* export async function getPost(id) {
     if (!id) {
         throw new Error("you need a post ID yo find it ");
     }
@@ -109,4 +109,4 @@ export async function getPost(id) {
     const response = await fetchToken(getPostURL)
 
     return await response.json();
-}
+} */

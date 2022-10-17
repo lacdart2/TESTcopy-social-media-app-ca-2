@@ -37,7 +37,7 @@ const action = "/posts";
                } */
 
                 homePostsContainer.innerHTML +=
-                    `<a class="post" href = "detail.html?id=${json.id}" >
+                    `<a class="post" href = "/post/detail/index.html?id=${post.id}" >
                         <div class="card">
                             <div class="card-body text-start overflow-hidden d-flex flex-column align-items-left  p-3">
                                 <div class="card-top">

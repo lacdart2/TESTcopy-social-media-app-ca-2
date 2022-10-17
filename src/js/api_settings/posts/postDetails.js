@@ -18,7 +18,7 @@ const getPostURL = `${API_SOCIAL_URL}${action}/${id}`;
 
 console.log(getPostURL);
 
-(async function postDetail() {
+export async function postDetail() {
     try {
         const response = await fetchToken(getPostURL);
         console.log(response);
@@ -61,4 +61,5 @@ console.log(getPostURL);
     } catch (error) {
         /*  displayMessage("error", error, ".detail-container"); */
     }
-})();
+};
+postDetail()
