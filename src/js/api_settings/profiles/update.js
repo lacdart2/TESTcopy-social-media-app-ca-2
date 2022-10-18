@@ -1,4 +1,4 @@
-import { API_SOCIAL_URL } from "../constants";
+import { API_SOCIAL_URL } from "../constants.js";
 import { fetchToken } from "../fetchToken.js";
 //import { displayMessage } from "../../components/displayMessage.js";
 //const message = document.querySelector(".message-container"); 

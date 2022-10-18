@@ -1,19 +1,22 @@
 
 
-//import createMenu from "../../components/createMenu.js";
+
 import { API_SOCIAL_URL } from "../constants.js";
 import { fetchToken } from "../fetchToken.js";
-/* import createMenu from "../../components/createMenu.js"; */
 
-//createMenu();
+
+
 
 const action = "/posts";
+
 (async function readHome() {
     const homePostsContainer = document.querySelector(".posts-container-preview");
     const allPostsCount = document.querySelector(".posts-count");
 
 
     const getPostURL = `${API_SOCIAL_URL}${action}`;
+
+
     console.log(getPostURL)
     try {
         const response = await fetchToken(getPostURL)

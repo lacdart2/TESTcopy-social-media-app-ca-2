@@ -11,10 +11,6 @@ export async function setUpdateProfileListener() {
     const form = document.querySelector("#editPost");
 
 
-
-
-
-
     if (form) {
         const { name, email } = getFromStorage("profile");
         form.name.value = name;

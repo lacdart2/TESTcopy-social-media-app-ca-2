@@ -11,9 +11,9 @@ const method = "put";
 
 export async function updatePost(postData) {
 
-    //if (!postData.id) {
-    // alert("update needs an ID");
-    //}
+    if (!postData.id) {
+        alert("update needs an ID");
+    }
     const updatePostURL = `${API_SOCIAL_URL}${action}/${postData.id}`;
 
     try {
