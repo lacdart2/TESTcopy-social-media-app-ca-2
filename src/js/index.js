@@ -34,6 +34,7 @@ post.getPost(3586).then(console.log);  */
 
 
 
+<<<<<<< Updated upstream
 
 // test template :
 /* async function testTemplate() {
@@ -43,5 +44,18 @@ post.getPost(3586).then(console.log);  */
     const container = document.querySelector(".posts-container");
     renderPostTemplates(post, container)
 }
+=======
+} else if (path === "/post/edit/index.html") {
+
+    createMenu();
+    triggers.setUpdatePostFormListener();
+    apiCalls.postDetail();
+
+}
+/* else if (path === "/profile/edit/index.html") {
+    triggers.setUpdateProfileListener();
+
+} */
+>>>>>>> Stashed changes
 
 /* testTemplate() */

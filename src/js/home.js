@@ -1,6 +1,12 @@
+<<<<<<< Updated upstream:src/js/home.js
 
 import { API_SOCIAL_URL } from "./api_settings/constants.js";
 import { fetchToken } from "./api_settings/fetchToken.js";
+=======
+import { API_SOCIAL_URL } from "../constants.js";
+import { fetchToken } from "../fetchToken.js";
+
+>>>>>>> Stashed changes:src/js/api_settings/posts/home.js
 
 const action = "/posts";
 (async function () {
@@ -13,8 +19,6 @@ const action = "/posts";
         const json = await response.json();
         /*   const latest = json.filter(json => json.updated) */
         console.log(json);
-
-
 
         homePostsContainer.innerHTML = "";
         allPostsCount.innerHTML = "";
