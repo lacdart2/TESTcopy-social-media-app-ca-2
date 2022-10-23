@@ -5,7 +5,7 @@ import { fetchToken } from "../fetchToken.js";
 const action = "/profiles";
 
 
-export async function getProfiles() {
+export async function updateProfile() {
 
 
     const updateProfileURL = `${API_SOCIAL_URL}${action}`;

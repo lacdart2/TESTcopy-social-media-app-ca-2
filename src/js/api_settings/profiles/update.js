@@ -14,7 +14,7 @@ export async function updateProfile(profileData) {
     if (!profileData.name) {
         alert("profile needs a name");
     }
-    const updateProfileURL = `${API_SOCIAL_URL}${action}/${profileData.name}`;
+    const updateProfileURL = `${API_SOCIAL_URL}${action}/${profileData.name}/name`;
 
     try {
 

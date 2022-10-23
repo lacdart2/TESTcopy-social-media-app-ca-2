@@ -8,7 +8,7 @@ import { getFromStorage } from "../utils/storage.js";
 export async function setUpdateProfileListener() {
 
 
-    const form = document.querySelector("#editPost");
+    const form = document.querySelector("#editProfile");
 
 
     if (form) {
@@ -20,6 +20,7 @@ export async function setUpdateProfileListener() {
         button.disable = true;
 
         const profile = await getProfile(name);
+        console.log(profile);
 
 
         form.banner.value = profile.banner;

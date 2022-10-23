@@ -1,4 +1,4 @@
-import { API_SOCIAL_URL } from "../constants.js";
+/* import { API_SOCIAL_URL } from "../constants.js";
 import { fetchToken } from "../fetchToken.js";
 
 
@@ -18,10 +18,10 @@ export async function readAllProfiles() {
 
         profilesContainer.innerHTML = "";
 
-        /*   json.forEach(function (profile) {
-  
-              profilesContainer.innerHTML +=
-                  `<a class="post" href = "/post/detail/index.html?id=${profile.id}">
+        json.forEach(function (profile) {
+
+            profilesContainer.innerHTML +=
+                `<a class="post" href = "/post/detail/index.html?id=${profile.id}">
                           <div class="card">
                               <div class="card-body text-start overflow-hidden d-flex flex-column align-items-left">
                                   <div class="card-top">
@@ -49,9 +49,9 @@ export async function readAllProfiles() {
                               </div>
                           </div>
                        <a/> `
-  
-  
-          }); */
+
+
+        });
 
 
     } catch (error) {
@@ -59,3 +59,4 @@ export async function readAllProfiles() {
 
     }
 };
+ */
